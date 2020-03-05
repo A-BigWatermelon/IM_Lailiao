@@ -1,0 +1,218 @@
+﻿.index_side {
+    float: left;
+    width: 350px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+.search_box_tab {
+    z-index: 100;
+    height: 40px;
+    width: 320px;
+    margin-bottom: -7px;
+    font: normal 18px "Microsoft Yahei";
+    border-bottom: 0 none;
+    box-shadow: 0 -8px 4px -4px #888 inset;
+    color: #666;
+    zoom: 1;
+}
+
+    .search_box_tab .search_for_htl_current, .search_box_tab .search_for_htl_current {
+        position: relative;
+        width: 350px;
+        border: 1px solid #2F79DB;
+        border-bottom: 0 none;
+        border-radius: 3px 3px 0 0;
+        background-color: #3983E5;
+        color: #FFF;
+        cursor: default;
+    }
+
+    .search_box_tab .search_for_htl, .search_box_tab .search_for_pkg {
+        width: 348px;
+    }
+
+    .search_box_tab a {
+        float: left;
+        height: 42px;
+        line-height: 38px;
+        color: #666;
+        outline: none;
+    }
+
+.search_box {
+    position: relative;
+    height: 277px;
+    margin-bottom: 30px;
+    padding-top: 6px;
+    border: 1px solid #2F79DB;
+    border-top: 0 none;
+    border-radius: 6px;
+    background-color: #3983E5;
+}
+
+    .search_box th {
+        padding: 5px 10px;
+    }
+
+.search_form {
+    position: relative;
+    margin: 0 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+.searchbox .input_text, .searchbox .input_text2 {
+    padding-left: 3px;
+    border-color: #bbb #ddd #ddd #bbb;
+    border-style: solid;
+    border-width: 1px;
+    height: 28px;
+    width: 227px;
+    box-shadow: 1px 1px 1px #DDD inset;
+    outline: none;
+    color: #333;
+}
+
+.search_btn2 .btn_search {
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 85px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #ff6a00;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid rgba(80,80,80,0.5);
+}
+
+    .search_btn2 .btn_search:hover {
+        background-color: #e96304;
+    }
+
+.side_sales {
+    width: 380px;
+    margin-top: 20px;
+}
+
+    .side_sales a {
+        display: block;
+        width: 378px;
+        height: 63px;
+        margin-bottom: 10px;
+        border: 1px solid #E2E2E2;
+        border-radius: 3px;
+    }
+
+.sider_other_info {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+    .sider_other_info dt {
+        display: block;
+        margin-bottom: 5px;
+        padding-left: 36px;
+        background-position: -353px -80px;
+        background-repeat: no-repeat;
+        font: 18px/32px "Microsoft Yahei";
+        color: #528C01;
+    }
+
+    .sider_other_info dd {
+        display: block;
+        margin-bottom: 10px;
+        padding-left: 36px;
+        font-size: 14px;
+        color: #888;
+    }
+
+.head_bg {
+    height: 330px;
+    width: 1007px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.slide_wrap {
+    display: block;
+    position: absolute;
+    width: 1007px;
+    height: 380px;
+    margin-top: -30px;
+    background: #fff;
+    color: #666;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.slide_imglist {
+}
+
+    .slide_imglist li {
+        float: left;
+        margin-right: 3px;
+        z-index: 0;
+        display: inline;
+    }
+
+        .slide_imglist li img {
+            width: 1007px;
+            z-index: 0;
+            height: 420px;
+            display: block;
+        }
+
+.slide_title {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    overflow: hidden;
+    position: absolute;
+}
+
+    .slide_title h3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 45px;
+        line-height: 45px;
+        overflow: hidden;
+        padding: 0 10px;
+        z-index: 2;
+        display: block;
+    }
+
+        .slide_title h3 a {
+            color: #efefef;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+            .slide_title h3 a:hover {
+                color: #ff0;
+            }
+
+    .slide_title em {
+        position: absolute;
+        left: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 45px;
+        z-index: 1;
+    }
+
+.slide_num {
+    right: 5px;
+    z-index: 3;
+    top: 0;
+    position: absolute;
+    display: none;
+}

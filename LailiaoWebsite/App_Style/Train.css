@@ -1,0 +1,96 @@
+﻿.index_side {
+    margin-top:30px;
+    float: left;
+    width: 350px;
+    margin-left: 10px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+.search_box_tab {
+    z-index: 100;
+    height: 40px;
+    width: 320px;
+    margin-bottom: -7px;
+    font: normal 18px "Microsoft Yahei";
+    border-bottom: 0 none;
+    box-shadow: 0 -8px 4px -4px #888 inset;
+    color: #666;
+    zoom: 1;
+}
+
+    .search_box_tab .search_for_htl_current, .search_box_tab .search_for_htl_current {
+        position: relative;
+        width: 350px;
+        border: 1px solid #2F79DB;
+        border-bottom: 0 none;
+        border-radius: 3px 3px 0 0;
+        background-color: #3983E5;
+        color: #FFF;
+        cursor: default;
+    }
+
+    .search_box_tab .search_for_htl, .search_box_tab .search_for_pkg {
+        width: 348px;
+    }
+
+    .search_box_tab a {
+        float: left;
+        height: 42px;
+        line-height: 38px;
+        color: #666;
+        outline: none;
+    }
+
+.search_box {
+    position: relative;
+    height: 277px;
+    margin-bottom: 30px;
+    padding-top: 6px;
+    border: 1px solid #2F79DB;
+    border-top: 0 none;
+    border-radius: 6px;
+    background-color: #3983E5;
+}
+
+    .search_box th {
+        padding: 5px 10px;
+    }
+
+.search_form {
+    position: relative;
+    margin: 0 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+.searchbox .input_text, .searchbox .input_text2 {
+    padding-left: 3px;
+    border-color: #bbb #ddd #ddd #bbb;
+    border-style: solid;
+    border-width: 1px;
+    height: 28px;
+    width: 227px;
+    box-shadow: 1px 1px 1px #DDD inset;
+    outline: none;
+    color: #333;
+}
+
+.search_btn2 .btn_search {
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 85px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #ff6a00;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid rgba(80,80,80,0.5);
+}
+
+    .search_btn2 .btn_search:hover {
+        background-color: #e96304;
+    }

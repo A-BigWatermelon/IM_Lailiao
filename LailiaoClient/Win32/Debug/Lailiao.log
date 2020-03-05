@@ -1,0 +1,40 @@
+﻿生成启动时间为 2020/3/3 11:59:35。
+     1>项目“C:\Users\asus\Desktop\IM\Qt Project\Lailiao\Lailiao.vcxproj”在节点 2 上(Build 个目标)。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(345,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+     1>CustomBuild:
+         Moc'ing chat.h...
+         Moc'ing client.h...
+         Moc'ing download.h...
+         Moc'ing login.h...
+         Moc'ing search.h...
+         Moc'ing transfer.h...
+       ClCompile:
+         D:\VS\VC\bin\CL.exe /c /I. /ID:\program\qt5.5\5.5\msvc2012\include /ID:\program\qt5.5\5.5\msvc2012\include\QtWebKitWidgets /ID:\program\qt5.5\5.5\msvc2012\include\QtWebKit /ID:\program\qt5.5\5.5\msvc2012\include\QtWidgets /ID:\program\qt5.5\5.5\msvc2012\include\QtMultimedia /ID:\program\qt5.5\5.5\msvc2012\include\QtGui /ID:\program\qt5.5\5.5\msvc2012\include\QtANGLE /ID:\program\qt5.5\5.5\msvc2012\include\QtNetwork /ID:\program\qt5.5\5.5\msvc2012\include\QtCore /Idebug /I. /I"D:\program\qt5.5\5.5\msvc2012\mkspecs\win32-msvc2012" /I.\GeneratedFiles /Zi /nologo /W3 /WX- /Od /Oy- /D _WINDOWS /D UNICODE /D WIN32 /D QT_WEBKITWIDGETS_LIB /D QT_WEBKIT_LIB /D QT_WIDGETS_LIB /D QT_MULTIMEDIA_LIB /D QT_GUI_LIB /D QT_NETWORK_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Win32\Debug\\" /Fd"Win32\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt -w34100 -w34189 -w44996 Debug\moc_chat.cpp Debug\moc_client.cpp Debug\moc_download.cpp Debug\moc_login.cpp Debug\moc_search.cpp Debug\moc_transfer.cpp
+         moc_chat.cpp
+         moc_client.cpp
+         moc_download.cpp
+         moc_login.cpp
+         moc_search.cpp
+         moc_transfer.cpp
+         正在生成代码...
+       Link:
+         D:\VS\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"debug\\Lailiao.exe" /NOLOGO /LIBPATH:D:\program\qt5.5\5.5\msvc2012\lib /LIBPATH:D:/program/qt5.5/5.5/msvc2012/lib /LIBPATH:D:\program\qt5.5\5.5\msvc2012\lib D:\program\qt5.5\5.5\msvc2012\lib\qtmaind.lib shell32.lib D:/program/qt5.5/5.5/msvc2012/lib\Qt5Cored.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5WebKitWidgetsd.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5WebKitd.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5Widgetsd.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5Multimediad.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5Guid.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5Networkd.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5Cored.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"debug\Lailiao.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /SAFESEH "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" Win32\Debug\chat.obj
+         Win32\Debug\client.obj
+         Win32\Debug\moc_chat.obj
+         Win32\Debug\moc_client.obj
+         Win32\Debug\moc_download.obj
+         Win32\Debug\moc_login.obj
+         Win32\Debug\moc_search.obj
+         Win32\Debug\moc_transfer.obj
+         Win32\Debug\download.obj
+         Win32\Debug\qrc_icon.obj
+         Win32\Debug\login.obj
+         Win32\Debug\main.obj
+         Win32\Debug\search.obj
+         Win32\Debug\transfer.obj
+         Lailiao.vcxproj -> C:\Users\asus\Desktop\IM\Qt Project\Lailiao\debug\Lailiao.exe
+     1>已完成生成项目“C:\Users\asus\Desktop\IM\Qt Project\Lailiao\Lailiao.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:36.11

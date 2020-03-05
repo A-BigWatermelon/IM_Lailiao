@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icon/textcolor.png</file>
+        <file>icon/textbold.png</file>
+        <file>icon/textunder.png</file>
+        <file>icon/fileopen.png</file>
+        <file>icon/textitalic.png</file>
+        <file>icon/Chat-icon.png</file>
+        <file>icon/Login.png</file>
+        <file>icon/icq_offline.jpg</file>
+        <file>icon/icq_online.jpg</file>
+        <file>icon/E-Mail.png</file>
+        <file>icon/fileopen.png</file>
+        <file>icon/Files.png</file>
+        <file>icon/Floppy.png</file>
+        <file>icon/chat.png</file>
+        <file>icon/search-icon-hi.png</file>
+    </qresource>
+    <qresource prefix="/QQ">
+        <file>icon/qq/aio_pic_anti.png</file>
+        <file>icon/qq/aio_favourite_cell_normal@2x.png</file>
+        <file>icon/qq/titlebar_function_fileTransfer_hover@2x.png</file>
+        <file>icon/qq/titlebar_function_video_normal@2x.png</file>
+        <file>icon/qq/toolbar_emoticon_hover@2x.png</file>
+        <file>icon/qq/toolbar_history_hover@2x.png</file>
+        <file>icon/qq/toolbar_pictures_normal@2x.png</file>
+        <file>icon/qq/toolbar_screenCapture_hover@2x.png</file>
+        <file>icon/qq/toolbar_shake_hover@2x.png</file>
+        <file>icon/qq/Header+Search_Offline_Hover@2x.png</file>
+        <file>icon/qq/Header+Search_Online_Normal@2x.png</file>
+    </qresource>
+</RCC>
