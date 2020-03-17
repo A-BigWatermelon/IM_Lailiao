@@ -285,7 +285,7 @@ void Client::sendOffLineSlot()
 //打开chat聊天窗口
 void Client::showChatForm(QTreeWidgetItem* m, int ix)
 {
-    if (m->childCount() == 0) return;
+    if (m->childCount() == 0) return;//mark1-b,需考虑设计是否合理
 
 
     bool bflag = false;
@@ -346,7 +346,7 @@ void Client::addNewFriendToList(QString ip, QString qq, QString name)
     QTreeWidget *t = ui->treeWidget;
     QTreeWidgetItem *a = new QTreeWidgetItem(t, QStringList(tr("%1(%2)").arg(name).arg(qq)));
     a->setIcon(0,QIcon(":/icons/icon/icq_online.jpg"));
-    //QTreeWidgetItem *aip = new QTreeWidgetItem(a, QStringList(qq));
+    QTreeWidgetItem *aip = new QTreeWidgetItem(a, QStringList(qq));//mark1-a,需考虑设计是否合理
     createNewChatForm(ip, qq, name);
 }
 
