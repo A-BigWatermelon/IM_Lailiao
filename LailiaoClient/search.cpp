@@ -15,7 +15,7 @@ Search::Search(QString ip, QString qq, QString name) :
     this->qq = qq;
     this->nickName = name;
 
-    this->setWindowTitle(tr("ËÑË÷ºÃÓÑ"));
+    this->setWindowTitle(QStringLiteral("ËÑË÷ºÃÓÑ"));
     ui->qqRadioButton->setEnabled(true);
     ui->qqRadioButton->setChecked(true);
     ui->sendBtn->setDefault(true);
@@ -54,7 +54,7 @@ void Search::connectSlot1()
 {
     qDebug()<<"here";
     if (ui->qqLineEdit->text().trimmed().isEmpty()) {
-        QMessageBox::critical(this, tr("Request Failure"), tr("Please input your IP."));
+        QMessageBox::critical(this, QStringLiteral("Request Failure"), QStringLiteral("Please input your IP."));
     }
     clientSocket->abort();
     clientSocket->connectToHost(address,clientPort);
@@ -146,12 +146,12 @@ void Search::receiveAddResult()
     switch (res) {
     case AGREED:
         in >> ip_t >> qq_t >> name_t;
-        QMessageBox::information(this, tr("Hmmm..."), tr("I'm glad to hear that %1 agreed to add you as a friend.").arg(ip_t));
+        QMessageBox::information(this, QStringLiteral("Hmmm..."), QStringLiteral("I'm glad to hear that %1 agreed to add you as a friend.").arg(ip_t));
         emit newFriend(ip_t, qq_t, name_t);
         break;
     case DENIED:
         in >> ip_t >> qq_t >> name_t;
-        QMessageBox::information(this, tr("Hmmm..."), tr("I'm sorry! %1 denied your request.").arg(ip_t));
+        QMessageBox::information(this, QStringLiteral("Hmmm..."), QStringLiteral("I'm sorry! %1 denied your request.").arg(ip_t));
         break;
     default:
         break;

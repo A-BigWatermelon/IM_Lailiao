@@ -1,48 +1,11 @@
-﻿生成启动时间为 2020/3/17 23:24:07。
+﻿生成启动时间为 2020/3/18 22:41:05。
      1>项目“E:\Git\Instant Messaging\IM_Lailiao\LailiaoClient\Lailiao.vcxproj”在节点 2 上(Build 个目标)。
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(345,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
-     1>CustomBuild:
-         Moc'ing chat.h...
-         Moc'ing client.h...
-         Moc'ing download.h...
-         Moc'ing login.h...
-         Moc'ing search.h...
-         Moc'ing transfer.h...
-         Uic'ing chat.ui...
-     1>E:\Git\Instant Messaging\IM_Lailiao\LailiaoClient\chat.ui : warning : The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget1'.
-     1>E:\Git\Instant Messaging\IM_Lailiao\LailiaoClient\chat.ui : warning : The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget2'.
-         Uic'ing client.ui...
-         Uic'ing download.ui...
-     1>E:\Git\Instant Messaging\IM_Lailiao\LailiaoClient\download.ui : warning : The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget1'.
-         Uic'ing login.ui...
-         Uic'ing search.ui...
-         Uic'ing transfer.ui...
-     1>E:\Git\Instant Messaging\IM_Lailiao\LailiaoClient\transfer.ui : warning : The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget1'.
-         Rcc'ing icon.qrc...
-     1>E:\Git\Instant Messaging\IM_Lailiao\LailiaoClient\icon.qrc : warning : potential duplicate alias detected: 'fileopen.png'
-       ClCompile:
-         D:\VS\VC\bin\CL.exe /c /I. /ID:\program\qt5.5\5.5\msvc2012\include /ID:\program\qt5.5\5.5\msvc2012\include\QtWebKitWidgets /ID:\program\qt5.5\5.5\msvc2012\include\QtWebKit /ID:\program\qt5.5\5.5\msvc2012\include\QtWidgets /ID:\program\qt5.5\5.5\msvc2012\include\QtMultimedia /ID:\program\qt5.5\5.5\msvc2012\include\QtGui /ID:\program\qt5.5\5.5\msvc2012\include\QtANGLE /ID:\program\qt5.5\5.5\msvc2012\include\QtNetwork /ID:\program\qt5.5\5.5\msvc2012\include\QtCore /Idebug /I. /I"D:\program\qt5.5\5.5\msvc2012\mkspecs\win32-msvc2012" /I.\GeneratedFiles /Zi /nologo /W3 /WX- /Od /Oy- /D _WINDOWS /D UNICODE /D WIN32 /D QT_WEBKITWIDGETS_LIB /D QT_WEBKIT_LIB /D QT_WIDGETS_LIB /D QT_MULTIMEDIA_LIB /D QT_GUI_LIB /D QT_NETWORK_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Win32\Debug\\" /Fd"Win32\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt -w34100 -w34189 -w44996 chat.cpp client.cpp Debug\moc_chat.cpp Debug\moc_client.cpp Debug\moc_download.cpp Debug\moc_login.cpp Debug\moc_search.cpp Debug\moc_transfer.cpp download.cpp login.cpp main.cpp search.cpp transfer.cpp
-         chat.cpp
+     1>ClCompile:
+         D:\VS\VC\bin\CL.exe /c /I. /ID:\program\qt5.5\5.5\msvc2012\include /ID:\program\qt5.5\5.5\msvc2012\include\QtWebKitWidgets /ID:\program\qt5.5\5.5\msvc2012\include\QtWebKit /ID:\program\qt5.5\5.5\msvc2012\include\QtWidgets /ID:\program\qt5.5\5.5\msvc2012\include\QtMultimedia /ID:\program\qt5.5\5.5\msvc2012\include\QtGui /ID:\program\qt5.5\5.5\msvc2012\include\QtANGLE /ID:\program\qt5.5\5.5\msvc2012\include\QtNetwork /ID:\program\qt5.5\5.5\msvc2012\include\QtCore /Idebug /I. /I"D:\program\qt5.5\5.5\msvc2012\mkspecs\win32-msvc2012" /I.\GeneratedFiles /Zi /nologo /W3 /WX- /Od /Oy- /D _WINDOWS /D UNICODE /D WIN32 /D QT_WEBKITWIDGETS_LIB /D QT_WEBKIT_LIB /D QT_WIDGETS_LIB /D QT_MULTIMEDIA_LIB /D QT_GUI_LIB /D QT_NETWORK_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Win32\Debug\\" /Fd"Win32\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt -w34100 -w34189 -w44996 client.cpp
          client.cpp
      1>client.cpp(286): warning C4100: “ix”: 未引用的形参
-     1>client.cpp(349): warning C4189: “aip”: 局部变量已初始化但不引用
      1>client.cpp(407): warning C4100: “arg1”: 未引用的形参
-         moc_chat.cpp
-         moc_client.cpp
-         moc_download.cpp
-         moc_login.cpp
-         moc_search.cpp
-         moc_transfer.cpp
-         download.cpp
-     1>download.cpp(18): warning C4309: “=”: 截断常量值
-         login.cpp
-         main.cpp
-         search.cpp
-         transfer.cpp
-     1>transfer.cpp(14): warning C4309: “=”: 截断常量值
-         正在生成代码...
-         D:\VS\VC\bin\CL.exe /c /I. /ID:\program\qt5.5\5.5\msvc2012\include /ID:\program\qt5.5\5.5\msvc2012\include\QtWebKitWidgets /ID:\program\qt5.5\5.5\msvc2012\include\QtWebKit /ID:\program\qt5.5\5.5\msvc2012\include\QtWidgets /ID:\program\qt5.5\5.5\msvc2012\include\QtMultimedia /ID:\program\qt5.5\5.5\msvc2012\include\QtGui /ID:\program\qt5.5\5.5\msvc2012\include\QtANGLE /ID:\program\qt5.5\5.5\msvc2012\include\QtNetwork /ID:\program\qt5.5\5.5\msvc2012\include\QtCore /Idebug /I. /I"D:\program\qt5.5\5.5\msvc2012\mkspecs\win32-msvc2012" /I.\GeneratedFiles /Zi /nologo /W3 /WX- /Od /Oy- /D _WINDOWS /D UNICODE /D WIN32 /D QT_WEBKITWIDGETS_LIB /D QT_WEBKIT_LIB /D QT_WIDGETS_LIB /D QT_MULTIMEDIA_LIB /D QT_GUI_LIB /D QT_NETWORK_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Win32\Debug\\" /Fd"Win32\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt -w34100 -w34189 -w44996 GeneratedFiles\qrc_icon.cpp
-         qrc_icon.cpp
        Link:
          D:\VS\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"debug\\Lailiao.exe" /NOLOGO /LIBPATH:D:\program\qt5.5\5.5\msvc2012\lib /LIBPATH:D:/program/qt5.5/5.5/msvc2012/lib /LIBPATH:D:\program\qt5.5\5.5\msvc2012\lib D:\program\qt5.5\5.5\msvc2012\lib\qtmaind.lib shell32.lib D:/program/qt5.5/5.5/msvc2012/lib\Qt5Cored.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5WebKitWidgetsd.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5WebKitd.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5Widgetsd.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5Multimediad.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5Guid.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5Networkd.lib D:\program\qt5.5\5.5\msvc2012\lib\Qt5Cored.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"debug\Lailiao.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /SAFESEH "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" Win32\Debug\chat.obj
          Win32\Debug\client.obj
@@ -63,4 +26,4 @@
 
 生成成功。
 
-已用时间 00:00:53.94
+已用时间 00:00:06.22

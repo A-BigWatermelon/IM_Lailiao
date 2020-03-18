@@ -23,7 +23,7 @@ Chat::Chat(QString qq_s, QString qq_t,
     this->ip_s = ip_s;
     this->ip_t = ip_t;
 
-    this->setWindowTitle(tr("与%1聊天中").arg(name_t));
+    this->setWindowTitle(QStringLiteral("与%1聊天中").arg(name_t));
 
     ui->sendTextEdit->setFocus();
 
@@ -92,7 +92,7 @@ void Chat::setFontColor()
     QPixmap pix(16, 16);
     pix.fill(col);
     ui->toolButton_Palette->setIcon(pix);
-    this->setStatusTip(tr("选择字体颜色"));
+    this->setStatusTip(QStringLiteral("选择字体颜色"));
 }
 
 //槽函数，设置字体大小+选择字体
@@ -103,7 +103,7 @@ void Chat::setFontxx()
     QFont font = QFontDialog::getFont(&ok, QFont("Times", 12), this);
     if (!ok) return;
     ui->sendTextEdit->setFont(font);
-    this->setStatusTip(tr("设置字体大小"));
+    this->setStatusTip(QStringLiteral("设置字体大小"));
 }
 
 //槽函数，把图片放入Textedit内
@@ -145,7 +145,7 @@ void Chat::sendMessageSlot()
 {
     //QTextCodec::setCodecForTr(QTextCodec::codecForName("GBK"));
     if (ui->sendTextEdit->toPlainText().trimmed() == "") {
-        QMessageBox::critical(this, tr("Hmmm..."), tr("请输入聊天信息"));
+        QMessageBox::critical(this, QStringLiteral("Hmmm..."), QStringLiteral("请输入聊天信息"));
         return;
     }
     qDebug() << "sending...";
@@ -161,10 +161,10 @@ void Chat::sendMessageSlot()
     udpsocket->writeDatagram(datagram, address, (quint16)44444);
 
     ui->receiveTextEdit->append(name_s + "  " +
-                                QDateTime::currentDateTime().toString(tr("yyyy-MM-dd hh:mm:ss"))
+                                QDateTime::currentDateTime().toString(QStringLiteral("yyyy-MM-dd hh:mm:ss"))
                                 );
 
-    ui->receiveTextEdit->append(tr("%1\n").arg(ui->sendTextEdit->toHtml()));
+    ui->receiveTextEdit->append(QStringLiteral("%1\n").arg(ui->sendTextEdit->toHtml()));
     ui->sendTextEdit->clear();
 
 }
@@ -175,10 +175,10 @@ void Chat::messagefirmSlot(QString qq_in, QString message, QString name_in)
     if (qq_t == qq_in) {
         ui->receiveTextEdit->setAlignment(Qt::AlignLeft);
         ui->receiveTextEdit->append(name_in + "  " +
-                                    QDateTime::currentDateTime().toString(tr("yyyy-MM-dd hh:mm:ss"))
+                                    QDateTime::currentDateTime().toString(QStringLiteral("yyyy-MM-dd hh:mm:ss"))
                                    );
         ui->receiveTextEdit->setAlignment(Qt::AlignLeft);
-        ui->receiveTextEdit->append(tr("%1\n").arg(message));
+        ui->receiveTextEdit->append(QStringLiteral("%1\n").arg(message));
     }
 }
 
@@ -208,9 +208,9 @@ void Chat::receiveMessageSlot()
         qDebug() << "now qq_t = " << qq_t;
         if (qq_in == qq_t) {
             ui->receiveTextEdit->append(name_in + "  " +
-                                        QDateTime::currentDateTime().toString(tr("yyyy-MM-dd hh:mm:ss"))
+                                        QDateTime::currentDateTime().toString(QStringLiteral("yyyy-MM-dd hh:mm:ss"))
                                        );
-            ui->receiveTextEdit->append(tr("%1\n").arg(message));
+            ui->receiveTextEdit->append(QStringLiteral("%1\n").arg(message));
         }
         break;
     case FileName:
@@ -243,13 +243,13 @@ void Chat::hasPendingFile(QString userName,QString serverAddress,  //接收文件
     QString ipAddress = ip_s;
     if(ipAddress == clientAddress)
     {
-        int btn = QMessageBox::information(this,tr("接收文件"),
-                                 tr("来自%1(%2)的%3, 是否接受?")
+        int btn = QMessageBox::information(this,QStringLiteral("接收文件"),
+                                 QStringLiteral("来自%1(%2)的%3, 是否接受?")
                                  .arg(userName).arg(serverAddress).arg(fileName),
                                  QMessageBox::Yes,QMessageBox::No);
         if(btn == QMessageBox::Yes)
         {
-            QString name = QFileDialog::getSaveFileName(0,tr("保存文件"),fileName);
+            QString name = QFileDialog::getSaveFileName(0,QStringLiteral("保存文件"),fileName);
             if(!name.isEmpty())
             {
                 Download *client = new Download();
@@ -272,7 +272,7 @@ void Chat::on_toolButton_Bold_clicked(bool checked)
     } else {
         ui->sendTextEdit->setFontWeight(QFont::Normal);
     }
-    this->setStatusTip(tr("字体加粗"));
+    this->setStatusTip(QStringLiteral("字体加粗"));
     ui->sendTextEdit->setFocus();
 }
 
@@ -303,8 +303,8 @@ bool Chat::saveFile(const QString &fileName)//保存文件
     QFile file(fileName);
     if(!file.open(QFile::WriteOnly | QFile::Text))
     {
-        QMessageBox::warning(this,tr("保存文件"),
-        tr("无法保存文件 %1:\n %2").arg(fileName)
+        QMessageBox::warning(this,QStringLiteral("保存文件"),
+        QStringLiteral("无法保存文件 %1:\n %2").arg(fileName)
         .arg(file.errorString()));
         return false;
     }
@@ -319,26 +319,26 @@ void Chat::on_toolButton_ScreenShot_clicked()
     //QTextCodec::setCodecForTr(QTextCodec::codecForName("GBK"));
     screenshot = QPixmap::grabWindow(QApplication::desktop()->winId(),0,0,QApplication::desktop()->width(),QApplication::desktop()->height());
     QString format = "png";
-    QString picName = QFileDialog::getSaveFileName(this, tr("保存为"),
+    QString picName = QFileDialog::getSaveFileName(this, QStringLiteral("保存为"),
                                    "temp-image/",
-                                   tr("%1 Files (*.%2);;All Files (*)")
+                                   QStringLiteral("%1 Files (*.%2);;All Files (*)")
                                    .arg(format.toUpper())
                                    .arg(format));
     if (!picName.isEmpty())
         screenshot.save(picName, format.toLatin1());
     ui->sendTextEdit->append("<img src='temp-image/" + QFileInfo(picName).fileName() + "'  />");
 
-    this->setStatusTip(tr("系统截图"));
+    this->setStatusTip(QStringLiteral("系统截图"));
 }
 
 void Chat::on_toolButton_Save_clicked()
 {
      //QTextCodec::setCodecForTr(QTextCodec::codecForName("GBK"));
     if(ui->receiveTextEdit->document()->isEmpty()) {
-        QMessageBox::warning(0, tr("警告"), tr("没有信息需要保存"), QMessageBox::Ok);
+        QMessageBox::warning(0, QStringLiteral("警告"), QStringLiteral("没有信息需要保存"), QMessageBox::Ok);
     } else {
        //获得文件名
-       QString fileName = QFileDialog::getSaveFileName(this,tr("保存聊天记录"),tr("聊天记录"),tr("file(*.txt);;All File(*.*)"));
+       QString fileName = QFileDialog::getSaveFileName(this,QStringLiteral("保存聊天记录"),QStringLiteral("聊天记录"),QStringLiteral("file(*.txt);;All File(*.*)"));
        if(!fileName.isEmpty()) {
            saveFile(fileName);
        }
@@ -360,8 +360,8 @@ void Chat::on_toolButton_Nudge_clicked()
     udpsocket->writeDatagram(datagram, address, (quint16)44444);
 
     //this->windowAnimation();
-    ui->receiveTextEdit->append(QDateTime::currentDateTime().toString(tr("yyyy-MM-dd hh:mm:ss"))
-                                + tr("你发送一个窗口震动"));
+    ui->receiveTextEdit->append(QDateTime::currentDateTime().toString(QStringLiteral("yyyy-MM-dd hh:mm:ss"))
+                                + QStringLiteral("你发送一个窗口震动"));
 }
 
 void Chat::windowAnimation()
@@ -392,6 +392,6 @@ void Chat::getWindowAnimation(QString name_sender)
 {
     //QTextCodec::setCodecForTr(QTextCodec::codecForName("GBK"));
     this->windowAnimation();
-    ui->receiveTextEdit->append(QDateTime::currentDateTime().toString(tr("yyyy-MM-dd hh:mm:ss"))
-                                + " " + name_sender + tr(" 发送了一个窗口震动"));
+    ui->receiveTextEdit->append(QDateTime::currentDateTime().toString(QStringLiteral("yyyy-MM-dd hh:mm:ss"))
+                                + " " + name_sender + QStringLiteral(" 发送了一个窗口震动"));
 }

@@ -3,9 +3,8 @@
 
 #include <QMainWindow>
 #include <QtNetwork>
-//#include <QtGui>
-//#include <phonon/mediaobject.h>
-//#include <QtWebKit/QWebView>
+#include <QMap>
+//#include <QString>
 #include <QtWebKitWidgets/QWebView>
 #include <QSystemTrayIcon>
 #include <QTreeWidgetItem>
@@ -42,9 +41,14 @@ public:
     QString nickname_t;
     QString qq_t;
 
-    QList<Chat *> chat_list;
+    QList<Chat *> chat_list;  //聊天窗口列表
     QList<QString> firm_list;
     QStringList id_list;
+
+	//mark2 设计一个树节点和qq号的映射是解决树节点不能setitemdata的问题
+	//只后双击好友（树节点，会从该map中找到树节点对应的qq号）
+	//此外该map应该接受数据库的好友信息，用来初始化好友列表
+	QMap<QTreeWidgetItem*,QString> mapFriendQQ;
 
 public:
     explicit Client(QString qq, QString nickName, QString ipv4);

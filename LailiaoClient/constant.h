@@ -1,6 +1,6 @@
 #ifndef CONSTANT_H
 #define CONSTANT_H
-#define DOMAIN_IP "192.168.0.100" /*"127.0.0.1"*/
+#define DOMAIN_IP "192.168.0.103" /*"127.0.0.1"*/
 //״̬
 #define LOGIN_SUCCESS 3
 #define LOGIN_FALSE 4

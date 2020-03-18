@@ -82,6 +82,7 @@ void Login::toNextFrame()
         qDebug() << "success";
         tcpSocket->abort();
         client = new Client(qq, nickName, ipv4.toString());
+		//mark2：clien->tshow之前从服务器初始化用户的好友列表，服务器数据->map->好友列表树
         client->show();
         this->close();
         break;

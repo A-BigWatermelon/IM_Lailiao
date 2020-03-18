@@ -9,7 +9,7 @@ Client::Client(QString qq, QString nickName, QString ipv4) :
 {
    // QTextCodec::setCodecForTr(QTextCodec::codecForName("GBK"));
     ui->setupUi(this);
-    this->setWindowTitle(tr("来聊"));
+    this->setWindowTitle(QStringLiteral("来聊"));
     ui->nameLabel->setText(nickName+"("+qq+")");
     ui->comboBox->setCurrentIndex(0);
     ui->toolButton_tx->setIcon(QIcon(":/icons/icon/icq_online.jpg"));
@@ -44,7 +44,8 @@ Client::Client(QString qq, QString nickName, QString ipv4) :
     clientSocket->abort();
     clientSocket->connectToHost(address, tcpPort);
 
-    //把自己添加为好友，防止自己添加自己
+    //把自己添加为好友，防止自己添加自己 
+	//mark2,还有一种方法是添加时做限制，不然和自己聊天怎么办？
     addNewFriendToList(ipv4, qq, nickName);
     //////////////////////////////////////////////////////////////
 
@@ -128,8 +129,8 @@ void Client::readTCPMessageSlot()
         sys.play();
         in >> ip_s >> qq_s >> nickname_s;
         if (QMessageBox::Yes == QMessageBox::question(this,
-                                tr("添加好友提醒"),
-                                tr("%1 想和你成为好友，您是否接受?").arg(ip_s),
+                                QStringLiteral("添加好友提醒"),
+                                QStringLiteral("%1 想和你成为好友，您是否接受?").arg(ip_s),
                                 QMessageBox::Yes | QMessageBox::No,
                                 QMessageBox::Yes)) {
             sendAddResult(quint8(AGREED));
@@ -285,15 +286,14 @@ void Client::sendOffLineSlot()
 //打开chat聊天窗口
 void Client::showChatForm(QTreeWidgetItem* m, int ix)
 {
-    if (m->childCount() == 0) return;//mark1-b,需考虑设计是否合理
-
-
+    //if (m->childCount() == 0) return;//mark1-b,需考虑设计是否合理
     bool bflag = false;
-
+	//不采用下面的方法可能是考虑到了改备注,需要从一个map中读取 mark2
     /*int index=m->text(0).lastIndexOf('(');
     int index2=m->text(0).lastIndexOf(')');
     QString id =m->text(0).mid(index+1,index2-index-1);*/
-    QString id=m->child(0)->text(0);
+
+    //QString id=m->child(0)->text(0);QString id应该以m为键从map找
     int n = ui->treeWidget->topLevelItemCount();
     if (!(id_list.isEmpty())) {
         for (int i = 0; i < id_list.size(); ++i) {
@@ -344,9 +344,11 @@ void Client::outputlist(QString qqid)
 void Client::addNewFriendToList(QString ip, QString qq, QString name)
 {
     QTreeWidget *t = ui->treeWidget;
-    QTreeWidgetItem *a = new QTreeWidgetItem(t, QStringList(tr("%1(%2)").arg(name).arg(qq)));
+    QTreeWidgetItem *a = new QTreeWidgetItem(t, QStringList(QStringLiteral("%1(%2)").arg(name).arg(qq)));
     a->setIcon(0,QIcon(":/icons/icon/icq_online.jpg"));
-    QTreeWidgetItem *aip = new QTreeWidgetItem(a, QStringList(qq));//mark1-a,需考虑设计是否合理
+    //QTreeWidgetItem *aip = new QTreeWidgetItem(a, QStringList(qq));//mark1-a,需考虑设计是否合理
+	//QTreeWidgetItem竟然没有类似于MFC的setitemdata,只好建立一个QMap mark2，将QTreeWidgetItem *a和qq存入
+	//后期每次添加好友后还要将好友数据更新至数据库
     createNewChatForm(ip, qq, name);
 }
 
@@ -365,7 +367,7 @@ void Client::checkConnectionStateSLot()
 {
     //QTextCodec::setCodecForTr(QTextCodec::codecForName("GBK"));
     if (clientSocket->state() == QAbstractSocket::UnconnectedState) {
-        QMessageBox::critical(this, tr("服务器下线"), tr("无法连接服务器，请重新登录"));
+        QMessageBox::critical(this, QStringLiteral("服务器下线"), QStringLiteral("无法连接服务器，请重新登录"));
         QObject::killTimer(timerID);
         ui->comboBox->setCurrentIndex(1);
     }
